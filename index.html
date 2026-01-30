@@ -4,8 +4,10 @@
   <base href="/swan-energy-website/">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Swan Energy | Powering Africa</title>
   <meta name="description" content="Swan Energy Limited delivers residential and commercial solar solutions in Kenya, biogas power projects, and a solar equipment marketplace." />
+
   <style>
     :root {
       --red: #d71920;
@@ -13,14 +15,24 @@
       --white: #ffffff;
       --gray: #f5f5f5;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: var(--black);
       background: var(--white);
       line-height: 1.6;
     }
-    a { text-decoration: none; color: inherit; }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     /* NAV */
     header {
@@ -30,6 +42,7 @@
       border-bottom: 1px solid #eee;
       z-index: 100;
     }
+
     .nav {
       max-width: 1200px;
       margin: auto;
@@ -38,28 +51,63 @@
       justify-content: space-between;
       padding: 1rem 1.5rem;
     }
-    .nav img { height: 48px; }
-    .nav ul { list-style: none; display: flex; gap: 1.5rem; }
-    .nav a:hover { color: var(--red); }
+
+    .nav img {
+      height: 48px;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav a:hover {
+      color: var(--red);
+    }
 
     /* HERO */
     .hero {
       padding: 5rem 1.5rem;
-      background: linear-gradient(90deg, #fff 60%, #fbe9ea 100%);
+      min-height: 80vh;
+      background-image: url('/swan-energy-website/assets/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
     }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
     .hero-inner {
       max-width: 1200px;
       margin: auto;
+      position: relative;
+      z-index: 2;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
-      align-items: center;
+      grid-template-columns: 1fr;
+      text-align: left;
     }
+
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
+      color: var(--white);
     }
-    .hero p { font-size: 1.1rem; margin-bottom: 2rem; }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      color: var(--white);
+    }
+
     .btn {
       display: inline-block;
       padding: 0.9rem 1.6rem;
@@ -67,25 +115,47 @@
       border-radius: 4px;
       font-weight: bold;
     }
-    .btn-primary { background: var(--red); color: var(--white); }
-    .btn-outline { border: 2px solid var(--black); }
+
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--white);
+      color: var(--white);
+    }
 
     /* SECTIONS */
-    section { padding: 4rem 1.5rem; }
-    .container { max-width: 1200px; margin: auto; }
-    .section-title { font-size: 2rem; margin-bottom: 2rem; }
+    section {
+      padding: 4rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
 
     .grid-4 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2rem;
     }
+
     .card {
       border: 1px solid #eee;
       padding: 2rem;
       background: var(--white);
     }
-    .card h3 { margin-bottom: 0.5rem; }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
 
     /* FEATURE */
     .feature {
@@ -97,7 +167,9 @@
     }
 
     /* MARKETPLACE */
-    .marketplace .card { text-align: center; }
+    .marketplace .card {
+      text-align: center;
+    }
 
     /* DOWNLOADS */
     .downloads {
@@ -105,6 +177,7 @@
       color: var(--white);
       text-align: center;
     }
+
     .downloads .btn-outline {
       border-color: var(--white);
       color: var(--white);
@@ -116,21 +189,29 @@
       color: var(--white);
       padding: 3rem 1.5rem;
     }
-    footer .grid-4 { font-size: 0.9rem; }
+
+    footer .grid-4 {
+      font-size: 0.9rem;
+    }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .feature { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.3rem; }
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .feature {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <nav class="nav">
-    <img src="/swan-energy-website/assets/logo.jpg" alt="Swan Energy Logo" />
+    <img src="/swan-energy-website/assets/logo.jpg" alt="Swan Energy Logo">
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Solar Solutions</a></li>
@@ -142,20 +223,17 @@
   </nav>
 </header>
 
-<section class="hero"> 
-  <style>
-    .hero {
-  background-image: url('/swan-energy-website/assets/hero.jpg');
-  background-size: cover;
-  background-position: center;
-}
+<section class="hero">
   <div class="hero-overlay"></div>
-  <div class="hero-inner" style="grid-template-columns:1fr; text-align:left;">
+  <div class="hero-inner">
     <div>
-      <h1 style="color:#fff;">Powering Africa</h1>
-      <p style="color:#fff; max-width:600px;">Clean, reliable solar and biogas energy solutions for homes, businesses, and communities across Kenya and beyond.</p>
+      <h1>Powering Africa</h1>
+      <p>
+        Clean, reliable solar and biogas energy solutions for homes,
+        businesses, and communities across Kenya and beyond.
+      </p>
       <a href="#" class="btn btn-primary">Get a Quote</a>
-      <a href="#" class="btn btn-outline" style="color:#fff; border-color:#fff;">Visit Marketplace</a>
+      <a href="#" class="btn btn-outline">Visit Marketplace</a>
     </div>
   </div>
 </section>
@@ -164,10 +242,22 @@
   <div class="container">
     <h2 class="section-title">What We Do</h2>
     <div class="grid-4">
-      <div class="card"><h3>Residential Solar</h3><p>Custom rooftop solar systems for reliable and affordable home energy.</p></div>
-      <div class="card"><h3>Commercial Solar</h3><p>Cost-effective solar solutions for offices, factories and institutions.</p></div>
-      <div class="card"><h3>Biogas Power</h3><p>Waste-to-energy solutions including the Dagoretti Market biogas project.</p></div>
-      <div class="card"><h3>Marketplace</h3><p>Solar inverters and lithium batteries engineered for performance.</p></div>
+      <div class="card">
+        <h3>Residential Solar</h3>
+        <p>Custom rooftop solar systems for reliable and affordable home energy.</p>
+      </div>
+      <div class="card">
+        <h3>Commercial Solar</h3>
+        <p>Cost-effective solar solutions for offices, factories and institutions.</p>
+      </div>
+      <div class="card">
+        <h3>Biogas Power</h3>
+        <p>Waste-to-energy solutions including the Dagoretti Market biogas project.</p>
+      </div>
+      <div class="card">
+        <h3>Marketplace</h3>
+        <p>Solar inverters and lithium batteries engineered for performance.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -175,10 +265,13 @@
 <section class="feature">
   <div class="container">
     <h2 class="section-title">Featured Project: Dagoretti Market Biogas Plant</h2>
-    <p>Transforming organic waste into clean, usable energy while improving sanitation and reducing environmental impact.</p>
+    <p>
+      Transforming organic waste into clean, usable energy while improving
+      sanitation and reducing environmental impact.
+    </p>
   </div>
   <div>
-    <img src="assets/biogas.jpg" alt="Biogas project" style="width:100%;" />
+    <img src="/swan-energy-website/assets/biogas.jpg" alt="Biogas project" style="width:100%;">
   </div>
 </section>
 
@@ -197,17 +290,30 @@
 <section class="downloads">
   <div class="container">
     <h2 class="section-title">Downloads</h2>
-    <a href="assets/SWAN-ENERGY-COMPANY-PROFILE.pdf" class="btn btn-outline">Company Profile</a>
-    <a href="assets/Solar-Heater-Presentation.pdf" class="btn btn-outline">Solar Water Heater Guide</a>
+    <a href="/swan-energy-website/assets/SWAN-ENERGY-COMPANY-PROFILE.pdf" class="btn btn-outline">Company Profile</a>
+    <a href="/swan-energy-website/assets/Solar-Heater-Presentation.pdf" class="btn btn-outline">Solar Water Heater Guide</a>
   </div>
 </section>
 
 <footer>
   <div class="container grid-4">
-    <div><strong>Swan Energy Limited</strong><p>Powering Africa through Renewable Energy</p></div>
-    <div><p>Solar Solutions</p><p>Biogas Projects</p><p>Marketplace</p></div>
-    <div><p>Karen, Kenya</p><p>info@swanenergy.co.ke</p><p>+254 73 854 8500</p></div>
-    <div><p>© 2026 Swan Energy Limited</p></div>
+    <div>
+      <strong>Swan Energy Limited</strong>
+      <p>Powering Africa through Renewable Energy</p>
+    </div>
+    <div>
+      <p>Solar Solutions</p>
+      <p>Biogas Projects</p>
+      <p>Marketplace</p>
+    </div>
+    <div>
+      <p>Karen, Kenya</p>
+      <p>info@swanenergy.co.ke</p>
+      <p>+254 73 854 8500</p>
+    </div>
+    <div>
+      <p>© 2026 Swan Energy Limited</p>
+    </div>
   </div>
 </footer>
 
